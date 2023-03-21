@@ -12,9 +12,14 @@ h1, h2 {
 }
 
 canvas {
+<<<<<<< HEAD
     width: 500px;
     height: 220px;
     margin-top: 10px;
+=======
+    width: 400px;
+    height: 120px;
+>>>>>>> 188209d5b5ef0c0478ee71d6f28151c78f0c66fd
     background-color: white;
     border: 1px solid #c3c3c3;
 }
