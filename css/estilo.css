@@ -42,7 +42,7 @@ canvas {
 }
 
 .menu tr.pintar {
-	background: #ede9fe;
+	background: #edeffe;
 }
 
 .menu td {
@@ -102,7 +102,7 @@ tr.contenedor_relleno td, tr.contenedor_relleno th {
 	padding: 15px;
 	margin: 15px auto;
 	border: 1px solid black;
-	background: #ede9fe;
+	background: #edeffe;
 	border-radius: 10px;
 	box-shadow: 3px 3px 3px 3px #c7c7c7;
 }
