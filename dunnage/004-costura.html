@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Costura</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../img/logo_icon.png">
+    <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+    <script src="../js/signature_pad.js"></script>
+</head>
+	<a href="index.html">
+		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
+	</a>
+	<br>
+	<h1>Verificación de Contadores de</h1>
+	<h1 id="titulo">Costura</h1>
+
+	<div class="formulario">
+		<div id="signature-pad" class="signature-pad" >
+			<h2>Firma del Operador</h2>
+			<label for="nombreFirma">Nombre del Operador</label>
+			<input type="text" name="nombreFirma" id="nombreFirma">
+			<hr>
+			<!-- Contenedor y Elemento Canvas -->
+			<label>Firma</label>
+			<div class="signature-pad--body">
+				<canvas id="canvas"></canvas>
+			</div>
+		</div>
+		<button id="guardar" name="guardar" class="btn-datos">Guardar Firma</button>
+		<label id="firmaGuardada1"></label>
+	</div>
+
+<!--              Costura              -->
+
+<!--     Formulario Costura     -->
+
+	<div class="formulario" id="formTabla">
+		<h2 class="titulo">Costura</h2>
+		<hr>
+		<label>Turno</label>
+		<input type="text" class="dato">
+
+		<label>Linea</label>
+		<input type="text" class="dato">
+
+		<label>Orden</label>
+		<input type="text" class="dato">
+
+		<label>Item</label>
+		<input type="text" class="dato">
+
+		<label>Caja</label>
+		<input type="text" class="dato">
+
+		<label>Paquete de Etiquetas</label>
+		<input type="text" class="dato">
+
+		<label>Contador</label>
+		<input type="text" class="dato">
+
+		<label>Proxima Etiqueta a Costurar (PEC)</label>
+		<input type="text" class="dato">
+
+		<label>ETIQUETA INICIAL + CONTADOR (E+C)</label>
+		<input type="text" class="dato">
+
+		<label>¿Coinciden (PEC) y (E+C)?</label>
+		<select class="dato">
+			<option value="Si" selected="">Si</option>
+			<option value="No">No</option>
+		</select>
+
+		<label>Porcentaje</label>
+		<input type="text" class="dato">
+
+		<label>Código del Operador</label>
+		<input type="text" class="dato">
+
+		<label class="oculto">FIRMA DEL OPERADOR</label>
+		<input type="text" class="dato oculto">
+
+		<label>Día</label>
+		<input type="date" name="dia" class="dato">
+
+		<label>Hora</label>
+		<input type="time" class="dato">
+
+		<label>Inspector</label>
+		<input type="text" class="dato">
+
+		<!-- Botón para enviar datos -->
+		<input type="submit" name="aceptar" value="Enviar Datos" class="btn-datos" onclick="datos('Costura')">
+	</div>
+
+<!--     Tabla Costura     -->
+
+	<table id="tablaDatos">
+		<thead>
+			<tr>
+				<th colspan="16">Costura</th>
+			</tr>
+			<tr>
+				<th>TURNO</th>
+				<th>LINEA</th>
+				<th>ORDEN</th>
+				<th>ITEM</th>
+				<th>CAJA</th>
+				<th>PAQUETE DE ETIQUETAS</th>
+				<th>CONTADOR</th>
+				<th>PROXIMA ETIQUETA A COSTURAR (PEC)</th>
+				<th>ETIQUETA INICIAL + CONTADOR (E+C)</th>
+				<th>COINCIDEN (PEC) Y (E+C)</th>
+				<th>PORCENTAJE</th>
+				<th>CODIGO DEL OPERADOR</th>
+				<th>FIRMA DEL OPERADOR</th>
+				<th>DIA</th>
+				<th>HORA</th>
+				<th>INSPECTOR</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	<input type="submit" name="aceptar" value="Descargar Tabla Costura" class="btn-tabla" onclick="exportTableToExcel()">
+
+    <script src="../js/tabla.js"></script>
+    <script src="../js/firma.js"></script>
+</body>
+</html>

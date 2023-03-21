@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bitacora</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+</head>
+<body>
+	<a href="index.html">
+		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
+	</a>
+	<br>
+	<h1 id="titulo">Bitacora</h1>
+
+	<div class="formulario">
+		<label>Maquinaria Arvor</label>
+		<input type="text" class="datoTitulo">
+		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTitulo()">
+		<label id="confirmacion"></label>
+	</div>
+
+<!--              Bitacora              -->
+
+<!--     Formulario Bitacora     -->
+
+	<div class="formulario" id="formTabla">		
+		<h2 class="titulo">Bitacora de validación de calibre en el área de corte de liner</h2>
+		<hr>
+		
+		<label>Fecha</label>
+		<input type="date" name="dia" class="dato">
+
+		<label>Turno</label>
+		<input type="text" class="dato">
+
+		<label>Número de Rollo</label>
+		<input type="text" class="dato">
+
+		<label>Proveedor</label>
+		<input type="text" class="dato">
+
+		<label>PO</label>
+		<input type="text" class="dato">
+
+		<label>Calibre</label>
+		<input type="text" class="dato">
+
+		<label>Inspector</label>
+		<input type="text" class="dato">
+
+		<!-- Botón para enviar datos -->
+		<input type="submit" name="aceptar" value="Enviar Datos" class="btn-datos" onclick="datos(0)">
+	</div>
+
+<!--     Tabla Bitacora     -->
+
+	<table id="tablaDatos">
+		<thead>
+			<tr>
+				<th colspan="5">Bitacora de validacion de calibre en el area de corte de liner</th>
+				<th>MAQUINARIA ARVOR</th>
+				<td class="tdDatoTitulo"></td>
+			</tr>
+			<tr>
+				<th>FECHA</th>
+				<th>TURNO</th>
+				<th>NUMERO DE ROLLO</th>
+				<th>PROVEEDOR</th>
+				<th>PO</th>
+				<th>CALIBRE</th>
+				<th>INSPECTOR</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	<input type="submit" name="aceptar" value="Descargar Tabla Bitacora" class="btn-tabla" onclick="exportTableToExcel()">
+
+	<script type="text/javascript" src="../js/tabla.js"></script>
+</body>
+</html>

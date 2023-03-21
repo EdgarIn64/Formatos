@@ -1,0 +1,154 @@
+body {
+	font-family: Calibri;
+}
+
+strong {
+	color: blue;
+	text-transform: uppercase;
+}
+
+.firmaImg {
+	height: 50px;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+canvas {
+    width: 350px;
+    height: 100px;
+    background-color: white;
+    border:1px solid #c3c3c3;
+}
+
+.firmaMensaje {
+	position: absolute;
+	top: 210px;
+	left: 0;
+}
+
+.oculto {
+	display: none;
+}
+
+
+
+.menu table {
+	margin: 0px auto;
+	text-align: left;
+	border-radius: 10px;
+	box-shadow: 3px 3px 3px 3px #c7c7c7;
+}
+
+.menu tr.pintar {
+	background: #ede9fe;
+}
+
+.menu td {
+	padding: 10px;
+	font-size: 1.25rem; 
+}
+
+.menu th {
+	background: rgb(112, 146, 190);
+	font-size: 1.4rem;
+	padding: 5px;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 2px black;
+}
+
+.menu a {
+	color: black;
+	text-transform: uppercase;
+}
+
+.menu a:hover {
+	color: #2121ff;
+}
+
+.regresar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 45px;
+	padding: 5px;
+}
+
+.regresar:hover {
+	filter: brightness(110%);
+}
+
+table, tr, th, td {
+	font-size: 16px;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+tr, table {
+	border: 0px;
+}
+
+tr.contenedor_relleno td, tr.contenedor_relleno th {
+	border: 0px;
+}
+
+.formulario {
+	max-width: 500px;
+	text-align: left;
+	font-size: 1.3rem;
+	padding: 15px;
+	margin: 15px auto;
+	border: 1px solid black;
+	background: #ede9fe;
+	border-radius: 10px;
+	box-shadow: 3px 3px 3px 3px #c7c7c7;
+}
+
+.formulario .titulo {
+	text-align: center;
+	margin: 10px;
+}
+
+input, select {
+	display: block;
+	padding: 5px;
+}
+
+table {
+	margin: 20px auto;
+}
+
+input, label, select {
+	font-size: 1.2rem;
+	margin: 5px;
+}
+
+input[type='submit'] {
+	display: block;
+	padding: 7px;
+	border-radius: 2px;
+}
+
+input[type='submit']:hover, button:hover {
+	filter: brightness(109%);
+	text-shadow: 2px white;
+	cursor: pointer;
+}
+
+.btn-tabla {
+	margin: 20px auto;
+	background: #a1d9a1;
+	border-color: #87c7ba;
+	font-size: 1.4rem;
+}
+
+.btn-datos {
+	font-size: 1.4rem;
+	text-align: center;
+	margin: 20px auto;
+	background: #a1a1d9;
+	border-color: #87bac7;
+}

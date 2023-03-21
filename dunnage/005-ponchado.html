@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SYN-CC-005-FORM-02</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="img/logo_icon.png">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css?v=11">
+	<script type="text/javascript" src="js/tabla.js?v=22"></script>
+<body onload="rellenarDatos()">
+	<a href="index.html">
+		<img class="regresar" src="img/flecha.png" alt="regresar" name="regresar">
+	</a>
+
+	<h1>
+		<a href="">Reiniciar</a>
+	</h1>
+
+<!--              Ponchado              -->
+
+<!--     Formulario Ponchado     -->
+
+	<div class="formulario" id="formPonchado">
+		<h2 class="titulo">CONTEO DE DEFECTOS TEST RACK</h2>
+		<hr>
+		<label>Número de Rollo</label>
+		<input type="text" class="dato">
+
+		<label>¿Lleva código?</label>
+		<select class="dato">
+			<option value="Si" selected="">Si</option>
+			<option value="No">No</option>
+		</select>
+
+		<label class="oculto">FIRMA DEL OPERADOR</label>
+		<input type="text" class="dato oculto">
+
+		<label>Día</label>
+		<input type="date" name="dia" class="dato">
+
+		<label>Hora</label>
+		<input type="time" class="dato">
+
+		<label>Inspector</label>
+		<input type="text" class="dato">
+
+		<!-- Botón para enviar datos -->
+		<input type="submit" name="aceptar" value="Enviar Datos" class="btn-datos" onclick="datos('Ponchado')">
+	</div>
+
+<!--     Tabla Ponchado     -->
+	<p>Puedes descargar la tabla con el botón, o puedes subrayar la tabla y copiarlo a excel</p>
+
+	<table id="tablaPonchado">
+		<thead>
+			<tr class="contenedor_relleno">
+				<th>ORDEN:</th>
+				<td class="rellenar">X</td>
+				<th>ITEM:</th>
+				<td class="rellenar">X</td>
+				<th>TURNO:</th>
+				<td class="rellenar">X</td>
+			</tr>
+			<tr>
+				<th colspan="6">Ponchado</th>
+			</tr>
+			<tr>
+				<th>NUM. ROLLO</th>
+				<th>LLEVA CODIGO (SI O NO)</th>
+				<th>FIRMA DEL OPERADOR</th>
+				<th>DIA</th>
+				<th>HORA</th>
+				<th>INSPECTOR</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	<p>...</p>
+	<input type="submit" name="aceptar" value="Descargar Tabla Ponchado" class="btn-tabla" onclick="tableToExcel('tablaPonchado', 'SYN-CC-003-Form-02 Ponchado')">
+
+</body>
+</html>

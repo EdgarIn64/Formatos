@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ensamble</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+	<script src="../js/signature_pad.js"></script>
+</head>
+<body>
+	<a href="index.html">
+		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
+	</a>
+	<br>
+	<h1>Rutina de Inspección</h1>
+	<h1 id="titulo">Ensamble</h1>
+
+	<div class="formulario">
+		<label>ORDEN</label>
+		<input type="text" class="datoTitulo">
+		<label>ITEM</label>
+		<input type="text" class="datoTitulo">
+		<label>TURNO</label>
+		<input type="text" class="datoTitulo">
+		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTitulo()">
+		<label id="confirmacion"></label>
+	</div>
+
+	<div class="formulario">
+		<div id="signature-pad" class="signature-pad" >
+			<h3>Firma del Operador</h3>
+			<div class="signature-pad--body">
+				<canvas id="canvas"></canvas>
+			</div>
+		</div>
+		
+		<select id="selectFirma">
+			<option value="1">Insertado</option>
+			<option value="2">Costura</option>
+		</select>
+
+		<input type="text" name="nombreFirma" id="nombreFirma">
+		<button id="guardar" name="guardar" class="btn-datos">Guardar Firma del Operador</button>
+		<p>Insertado: <label id="firmaGuardada1">---</label></p>
+		<p>Costura: <label id="firmaGuardada2">---</label></p>
+	</div>
+
+<!--              Ensamble              -->
+
+<!--     Formulario Ensamble     -->
+
+	<div class="formulario" id="formTabla">
+		<h2 class="titulo">Insertado</h2>
+		<hr>
+		<label>Número de Rollo</label>
+		<input type="text" class="dato">
+
+		<label>Línea</label>
+		<input type="text" class="dato">
+
+		<label>Medida del Doblez</label>
+		<input type="text" class="dato">
+
+		<label>Valvula Cerrada</label>
+		<input type="text" class="dato">
+
+
+		<label>Colocación de Gasket o Etiqueta</label>
+		<input type="text" class="dato">
+
+		<label>Código del Operador</label>
+		<input type="text" class="dato">
+
+		<label>¿Lleva código?</label>
+		<select class="dato">
+			<option value="Si" selected="">Si</option>
+			<option value="No">No</option>
+		</select>
+
+		<label class="oculto">FIRMA DE OPERADOR</label>
+		<input type="text" class="dato oculto">
+
+		<!--     Costura     -->
+		<h2 class="titulo">Costura</h2>
+		<hr>
+		<label>Número de Rollo</label>
+		<input type="text" class="dato">
+
+		<label>Ancho de la Bolsa</label>
+		<input type="text" class="dato">
+
+		<label>Longitud de la Bolsa</label>
+		<input type="text" class="dato">
+
+		<label>Puntadas X Pulgada</label>
+		<input type="text" class="dato">
+
+		<label>Tapa Cerrada</label>
+		<input type="text" class="dato">
+
+		<label>Etiqueta</label>
+		<input type="text" class="dato">
+
+		<label>Id Caja</label>
+		<input type="text" class="dato">
+
+		<label>Código del Operador</label>
+		<input type="text" class="dato">
+
+		<label>¿Pasa?</label>
+		<select class="dato">
+			<option value="Si" selected="">Si</option>
+			<option value="No">No</option>
+		</select>
+
+		<label class="oculto">FIRMA DEL OPERADOR</label>
+		<input type="text" class="dato oculto">
+
+		<label>Día</label>
+		<input type="date" name="dia" class="dato">
+
+		<label>Hora</label>
+		<input type="time" class="dato">
+
+		<label>Inspector</label>
+		<input type="text" class="dato">
+
+		<!-- Botón para enviar datos -->
+		<input type="submit" name="aceptar" value="Enviar Datos" class="btn-datos" onclick="datos()">
+	</div>
+
+<!--     Tabla Ensamble     -->
+	<table id="tablaDatos">
+		<thead>
+			<tr class="contenedor_relleno">
+				<th>ORDEN:</th>
+				<td class="tdDatoTitulo"></td>
+				<th>ITEM:</th>
+				<td class="tdDatoTitulo"></td>
+				<th>TURNO:</th>
+				<td class="tdDatoTitulo"></td>
+			</tr>
+			<tr>
+				<th colspan="8">Insertado</th>
+				<th colspan="13">Costura</th>
+			</tr>
+			<tr>
+				<th>N. R</th>
+				<th>LINEA</th>
+				<th>MEDIDA DEL DOBLEZ</th>
+				<th>VALVULA CERRADA</th>
+				<th>COLOCACION DE GASKET O ETIQUETA</th>
+				<th>CODIGO DEL OPERADOR</th>
+				<th>LLEVA CODIGO (SI O NO)</th>
+				<th>FIRMA DEL OPERADOR</th>
+				<!--      Costura     -->
+				<th>N. R</th>
+				<th>ANCHO DE LA BOLSA</th>
+				<th>LONGITUD DE LA BOLSA</th>
+				<th>PUNTADAS X PULGADA</th>
+				<th>TAPA CERRADA</th>
+				<th>ETIQUETA</th>
+				<th>ID CAJA</th>
+				<th>CODG. DEL OPERADOR</th>
+				<th>LLEVA CODIGO (SI O NO)</th>
+				<th>FIRMA DEL OPERADOR</th>
+				<th>DIA</th>
+				<th>HORA</th>
+				<th>INSPECTOR</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	<input type="submit" name="aceptar" value="Descargar Tabla Insertado" class="btn-tabla" onclick="exportTableToExcel('tablaDatos', 'SYN-CC-004 Ensamble')">
+
+	<script type="text/javascript" src="../js/tabla.js"></script>
+	<script type="text/javascript" src="../js/firma.js"></script>
+</body>
+</html>

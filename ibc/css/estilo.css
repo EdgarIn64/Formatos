@@ -1,0 +1,111 @@
+body {
+}
+
+canvas {
+    width: 500px;
+    height: 200px;
+    background-color: white;
+    border:1px solid #c3c3c3;
+}
+
+.firmaMensaje {
+	position: absolute;
+	top: 210px;
+	left: 0;
+}
+
+.oculto {
+	display: none;
+}
+
+.menu table{
+	margin: 0px auto;
+	text-align: left;
+	border-radius: 10px;
+	box-shadow: 3px 3px 3px 3px #c7c7c7;
+}
+
+.menu tr.pintar {
+	background: #efefef;
+}
+
+.menu td {
+	padding: 10px;
+	font-size: 1.25rem; 
+}
+
+.menu a {
+	color: black;
+}
+
+.menu a:hover {
+	color: #2121cc;
+}
+
+.regresar {
+	height: 50px;
+	padding: 20px;
+}
+
+.regresar:hover {
+	filter: brightness(110%);
+}
+
+table, tr, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+
+.formulario {
+	display: inline-block;
+	text-align: left;
+	font-size: 1.2rem;
+	padding: 10px;
+	margin: 15px;
+	border: 1px solid black;
+	background: #efefef;
+	border-radius: 10px;
+	box-shadow: 3px 3px 3px 3px #c7c7c7;
+}
+
+.formulario .titulo {
+	text-align: center;
+	margin: 10px;
+}
+
+table {
+	margin: 20px auto;
+}
+
+input, label, select {
+	font-size: 1.2rem;
+	margin: 5px;
+}
+
+input[type='submit'] {
+	display: block;
+	padding: 7px;
+	border-radius: 2px;
+}
+
+input[type='submit']:hover {
+	filter: brightness(110%);
+	text-shadow: 2px white;
+	cursor: pointer;
+}
+
+.btn-tabla {
+	margin: 20px auto;
+	background: #a1d9a1;
+	border-color: #87c7ba;
+	font-size: 1.4rem;
+}
+
+.btn-datos {
+	font-size: 1.4rem;
+	text-align: center;
+	margin: 20px auto;
+	background: #a1a1d9;
+	border-color: #87bac7;
+}

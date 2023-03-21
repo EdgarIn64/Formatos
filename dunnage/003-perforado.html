@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Perforado</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+<!--	<script src="../js/jquery.min.js"></script> -->
+	<script src="../js/signature_pad.js"></script>
+</head>
+<body>
+	<a href="index.html">
+		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
+	</a>
+	<br>
+	<h1>Rutina de Inspección de Preparación</h1>
+	<h1 id="titulo">Perforado</h1>
+
+	<div class="formulario">
+		<label>ORDEN</label>
+		<input type="text" class="datoTitulo" id="extra">
+		<label>ITEM</label>
+		<input type="text" class="datoTitulo">
+		<label>TURNO</label>
+		<input type="text" class="datoTitulo">
+		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTitulo()">
+		<label id="confirmacion"></label>
+	</div>
+
+	<div class="formulario">
+		<div id="signature-pad" class="signature-pad" >
+			<h2>Firma del Operador</h2>
+			<label for="nombreFirma">Nombre del Operador</label>
+			<input type="text" name="nombreFirma" id="nombreFirma">
+			<hr>
+			<!-- Contenedor y Elemento Canvas -->
+			<label>Firma</label>
+			<div class="signature-pad--body">
+				<canvas id="canvas"></canvas>
+			</div>
+		</div>
+		<button id="guardar" name="guardar" class="btn-datos">Guardar Firma</button>
+		<label id="firmaGuardada1"></label>
+	</div>
+
+<!--          PERFORADO          -->	
+
+<!--     Formulario Perforado         -->
+
+	<div class="formulario" id="formTabla">
+		<h2 class="titulo">PERFORADO</h2>
+		<hr>
+		<label for="rollo">Número de Rollo</label>
+		<input type="text" name="rollo" class="dato">
+
+		<label for="linea">Línea</label>
+		<input type="text" name="linea" class="dato">
+
+		<label for="ancho">DISTANCIA ANCHO</label>
+		<input type="text" name="ancho" class="dato">
+
+		<label for="largo">DISTANCIA LARGO</label>
+		<input type="text" name="largo" class="dato">
+
+		<label for="codigo">DADO* (SF/TF = 1 1/2”, TX = 1 3/8”, SX = 1 5/8”, FF = 0.75”)</label><br>
+		<input type="text" name="codigo" class="dato">
+
+		<label for="codigo">Código del operador</label>
+		<input type="text" name="codigo" class="dato">
+
+		<label for="codigoSelect">¿Lleva código?</label>
+		<select name="codigoSelect" class="dato">
+			<option value="Si" selected="">Si</option>
+			<option value="No">No</option>
+		</select>
+
+		<label for="" class="oculto">FIRMA DEL OPERADOR</label>
+		<input type="text" name="" class="dato oculto">
+
+		<label for="dia">Día</label>
+		<input type="date" name="dia" class="dato">
+
+		<label for="hora">Hora</label>
+		<input type="time" name="hora" class="dato">
+
+		<label for="insp">Inspector</label>
+		<input type="text" name="insp" class="dato">
+
+		<input type="submit" name="aceptar" value="Enviar Datos" class="btn-datos" onclick="datos()">
+	</div>
+
+<!--    Tabla PERFORADO      -->
+	<table id="tablaDatos">
+		<thead>
+			<tr class="contenedor_relleno">
+				<th>ORDEN:</th>
+				<td class="tdDatoTitulo"></td>
+				<th>ITEM:</th>
+				<td class="tdDatoTitulo"></td>
+				<th>TURNO:</th>
+				<td class="tdDatoTitulo"></td>
+			</tr>
+			<tr>
+				<th colspan="11">PERFORADO</th>
+			</tr>
+			<tr>
+				<th>NUM ROLLO</th>
+				<th>LINEA</th>
+				<th>DISTANCIA ANCHO</th>
+				<th>DISTANCIA LARGO</th>
+				<th>DADO*</th>
+				<th>CODIGO DEL OPERADOR</th>
+				<th>LLEVA CODIGO (SI O NO)</th>
+				<th>FIRMA DEL OPERADOR</th>
+				<th>DIA</th>
+				<th>HORA</th>
+				<th>INSPECTOR</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	<input type="submit" name="aceptar" value="Descargar Tabla de Perforado" class="btn-tabla" onclick="exportTableToExcel()">
+
+	<script type="text/javascript" src="../js/tabla.js"></script>
+	<script type="text/javascript" src="../js/firma.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Corte Impresión</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+	<script src="../js/signature_pad.js"></script>
+</head>
+<body>
+	<a href="index.html">
+		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
+	</a>
+	<br>
+	<h1>Rutina de Inspección de Preparación</h1>
+	<h1 id="titulo">Corte Impresión</h1>
+
+	<div class="formulario">
+		<label>ORDEN</label>
+		<input type="text" class="datoTitulo" id="extra">
+		<label>ITEM</label>
+		<input type="text" class="datoTitulo">
+		<label>TURNO</label>
+		<input type="text" class="datoTitulo">
+		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTitulo()">
+		<label id="confirmacion"></label>
+	</div>
+
+	<div class="formulario">
+		<div id="signature-pad" class="signature-pad" >
+			<h2>Firma del Operador</h2>
+			<select id="selectFirma">
+				<option value="1">Entrega</option>
+				<option value="2">Recibe</option>
+			</select>
+			<label for="nombreFirma">Nombre del Operador</label>
+			<input type="text" name="nombreFirma" id="nombreFirma">
+			<hr>
+			<label>Firma</label>
+			<div class="signature-pad--body">
+				<canvas id="canvas"></canvas>
+			</div>
+		</div>
+		
+		<button id="guardar" name="guardar" class="btn-datos">Guardar Firma del Operador</button>
+		<p>Entrega: <label id="firmaGuardada1">---</label></p>
+		<p>Recibe: <label id="firmaGuardada2">---</label></p>
+		
+	</div>
+<!--             IMPRESIÓN           -->
+
+<!--    FORMULARIO IMPRESIÓN    -->
+
+	<div class="formulario" id="formTabla">
+		<h2 class="titulo">IMPRESIÓN</h2>
+		<hr>
+		<label>Número de Rollo</label>
+		<input type="text" class="dato">
+
+		<label>Línea</label>
+		<input type="text" class="dato">
+
+		<label>Rollo y Proveedor</label>
+		<input type="text" class="dato">
+
+		<label>Nivel</label>
+		<input type="text" class="dato">
+
+		<label>Ancho</label>
+		<input type="text" class="dato">
+
+		<label>Largo</label>
+		<input type="text" class="dato">
+
+		<label>Es Legible?</label>
+		<select class="dato">
+			<option value="Si" selected="">Si</option>
+			<option value="No">No</option>
+		</select>
+
+		<label>Patente</label>
+		<input type="text" class="dato">
+
+		<label>Cod. Operador (Lanza Tela)</label>
+		<input type="text" class="dato">
+
+		<label>¿Lleva código?</label>
+		<select class="dato">
+			<option value="Si" selected="">Si</option>
+			<option value="No">No</option>
+		</select>
+
+		<label class="oculto">FIRMA DEL OPERADOR</label>
+		<input type="text" class="dato oculto">
+
+		<label>Recibe Tela</label>
+		<input type="text" class="dato">
+
+		<label class="oculto">FIRMA DEL OPERADOR</label>
+		<input type="text" class="dato oculto" value="---">
+
+		<label>Día</label>
+		<input type="date" class="dato">
+
+		<label>Hora</label>
+		<input type="time" class="dato">
+
+		<label>Inspector</label>
+		<input type="text" class="dato">
+
+		<!-- Botón para enviar datos -->
+		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datos(2)">
+	</div>
+
+<!--    TABLA IMPRESIÓN    -->
+	<table id="tablaDatos">
+		<thead>
+			<tr class="contenedor_relleno">
+				<th>ORDEN:</th>
+				<td class="tdDatoTitulo"></td>
+				<th>ITEM:</th>
+				<td class="tdDatoTitulo"></td>
+				<th>TURNO:</th>
+				<td class="tdDatoTitulo"></td>
+			</tr>
+			<tr>
+				<th colspan="3"></th>
+				<th colspan="3">ROLLO</th>
+				<th colspan="5">IMPRESION</th>
+			</tr>
+			<tr>
+				<th>NUM. ROLLO</th>
+				<th>LINEA</th>
+				<th>ROLLO Y PROVEEDOR</th>
+				<th>NIVEL</th>
+				<th>ANCHO</th>
+				<th>LARGO</th>
+				<th>¿ES LEGIBLE?</th>
+				<th>PATENTE</th>
+				<th>COD. OPERADOR (LANZA TELA)</th>
+				<th>LLEVA CODIGO (SI O NO)</th>
+				<th>FIRMA DEL OPERADOR</th>
+				<th>RECIBE TELA</th>
+				<th>FIRMA DEL OPERADOR</th>
+				<th>DIA</th>
+				<th>HORA</th>
+				<th>INSPECTOR</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	<br>
+	<input type="submit" name="aceptar" value="Descargar Tabla Corte Impresión" class="btn-tabla" onclick="exportTableToExcel()">
+
+	<script type="text/javascript" src="../js/tabla.js"></script>
+	<script type="text/javascript" src="../js/firma.js"></script>
+</body>
+</html>
