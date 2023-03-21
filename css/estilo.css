@@ -16,8 +16,8 @@ h1, h2 {
 }
 
 canvas {
-    width: 350px;
-    height: 100px;
+    width: 400px;
+    height: 120px;
     background-color: white;
     border:1px solid #c3c3c3;
 }
@@ -115,6 +115,7 @@ tr.contenedor_relleno td, tr.contenedor_relleno th {
 input, select {
 	display: block;
 	padding: 5px;
+	background: white;
 }
 
 table {
