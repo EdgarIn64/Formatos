@@ -7,19 +7,16 @@ strong {
 	text-transform: uppercase;
 }
 
-.firmaImg {
-	height: 50px;
-}
-
 h1, h2 {
 	text-align: center;
 }
 
 canvas {
-    width: 350px;
-    height: 100px;
+    width: 500px;
+    height: 220px;
+    margin-top: 10px;
     background-color: white;
-    border:1px solid #c3c3c3;
+    border: 1px solid #c3c3c3;
 }
 
 .firmaMensaje {
@@ -33,7 +30,6 @@ canvas {
 }
 
 
-
 .menu table {
 	margin: 0px auto;
 	text-align: left;
@@ -42,17 +38,17 @@ canvas {
 }
 
 .menu tr.pintar {
-	background: #ede9fe;
+	background: #edeffe;
 }
 
 .menu td {
-	padding: 10px;
-	font-size: 1.25rem; 
+	padding: 15px;
+	font-size: 1.5rem; 
 }
 
 .menu th {
 	background: rgb(112, 146, 190);
-	font-size: 1.4rem;
+	font-size: 1.7rem;
 	padding: 5px;
 	color: white;
 	text-align: center;
@@ -73,8 +69,8 @@ canvas {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 45px;
-	padding: 5px;
+	height: 60px;
+	padding: 15px;
 }
 
 .regresar:hover {
@@ -82,7 +78,7 @@ canvas {
 }
 
 table, tr, th, td {
-	font-size: 16px;
+	font-size: 1.3rem;
 	border: 1px solid black;
 	border-collapse: collapse;
 }
@@ -96,13 +92,13 @@ tr.contenedor_relleno td, tr.contenedor_relleno th {
 }
 
 .formulario {
-	max-width: 500px;
+	max-width: 550px;
 	text-align: left;
-	font-size: 1.3rem;
+	font-size: 1.4rem;
 	padding: 15px;
 	margin: 15px auto;
 	border: 1px solid black;
-	background: #ede9fe;
+	background: #edeffe;
 	border-radius: 10px;
 	box-shadow: 3px 3px 3px 3px #c7c7c7;
 }
@@ -115,6 +111,7 @@ tr.contenedor_relleno td, tr.contenedor_relleno th {
 input, select {
 	display: block;
 	padding: 5px;
+	background: white;
 }
 
 table {
@@ -122,8 +119,8 @@ table {
 }
 
 input, label, select {
-	font-size: 1.2rem;
-	margin: 5px;
+	font-size: 1.5rem;
+	margin: 8px;
 }
 
 input[type='submit'] {
@@ -134,7 +131,6 @@ input[type='submit'] {
 
 input[type='submit']:hover, button:hover {
 	filter: brightness(109%);
-	text-shadow: 2px white;
 	cursor: pointer;
 }
 
@@ -146,7 +142,9 @@ input[type='submit']:hover, button:hover {
 }
 
 .btn-datos {
-	font-size: 1.4rem;
+	font-size: 1.5rem;
+	padding: 10px;
+	text-shadow: 1px 1px #eaeaea;
 	text-align: center;
 	margin: 20px auto;
 	background: #a1a1d9;

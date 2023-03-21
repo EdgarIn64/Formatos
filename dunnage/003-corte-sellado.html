@@ -6,14 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="../img/logo_icon.png">
 	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
-<!--	<script src="../js/jquery.min.js"></script> -->
 	<script src="../js/signature_pad.js"></script>
 </head>
 <body>
 	<a href="index.html">
 		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
 	</a>
-	<br>
+	<br><br>
 	<h1>Rutina de Inspección de Preparación</h1>
 	<h1 id="titulo">Corte Sellado</h1>
 
@@ -23,7 +22,11 @@
 		<label>ITEM</label>
 		<input type="text" class="datoTitulo">
 		<label>TURNO</label>
-		<input type="text" class="datoTitulo">
+		<select class="datoTitulo">
+			<option>C-1</option>
+			<option>C-2</option>
+			<option>C-3</option>
+		</select>
 		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTitulo()">
 		<label id="confirmacion"></label>
 	</div>
@@ -52,7 +55,7 @@
 		<h2 class="titulo">SELLADO</h2>
 		<hr>
 		<label>Número de Rollo</label>
-		<input type="text" class="dato">
+		<input type="number" class="dato">
 
 		<label>Arvor</label>
 		<input type="text" class="dato">
@@ -61,28 +64,39 @@
 		<input type="text" class="dato">
 
 		<label>Ancho</label>
-		<input type="text" class="dato">
+		<input type="number" class="dato">
 
 		<label>Largo</label>
-		<input type="text" class="dato">
+		<input type="number" class="dato">
 
 		<label>Calibre</label>
-		<input type="text" class="dato">
+		<input type="number" class="dato">
 
 		<label>¿El corte es continuo?</label>
 		<select class="dato">
-			<option value="Si" selected="">Si</option>
+			<option value="Si" selected>Si</option>
 			<option value="No">No</option>
 		</select>
 
 		<label>Defecto</label>
 		<input type="text" class="dato">
+		<select class="dato">
+			<option value="Si">Si</option>
+			<option value="No" selected>No</option>
+		</select>
 
 		<label>Fuga</label>
 		<input type="text" class="dato">
+		<select class="dato">
+			<option value="Si">Si</option>
+			<option value="No" selected>No</option>
+		</select>
 
 		<label>Pasa</label>
-		<input type="text" class="dato">
+		<select class="dato">
+			<option value="Si" selected>Si</option>
+			<option value="No">No</option>
+		</select>
 
 		<label>Codigo del Operador</label>
 		<input type="text" class="dato">

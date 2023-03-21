@@ -12,7 +12,7 @@
 	<a href="index.html">
 		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
 	</a>
-	<br>
+	<br><br>
 	<h1>Rutina de Inspección de Preparación</h1>
 	<h1 id="titulo">Corte Impresión</h1>
 
@@ -22,7 +22,11 @@
 		<label>ITEM</label>
 		<input type="text" class="datoTitulo">
 		<label>TURNO</label>
-		<input type="text" class="datoTitulo">
+		<select class="datoTitulo">
+			<option>C-1</option>
+			<option>C-2</option>
+			<option>C-3</option>
+		</select>
 		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTitulo()">
 		<label id="confirmacion"></label>
 	</div>
@@ -56,7 +60,7 @@
 		<h2 class="titulo">IMPRESIÓN</h2>
 		<hr>
 		<label>Número de Rollo</label>
-		<input type="text" class="dato">
+		<input type="number" class="dato">
 
 		<label>Línea</label>
 		<input type="text" class="dato">
@@ -65,13 +69,13 @@
 		<input type="text" class="dato">
 
 		<label>Nivel</label>
-		<input type="text" class="dato">
+		<input type="number" class="dato">
 
 		<label>Ancho</label>
-		<input type="text" class="dato">
+		<input type="number" class="dato">
 
 		<label>Largo</label>
-		<input type="text" class="dato">
+		<input type="number" class="dato">
 
 		<label>Es Legible?</label>
 		<select class="dato">
