@@ -19,10 +19,17 @@
 	<div class="formulario">
 		<label>ORDEN</label>
 		<input type="text" class="datoTitulo" id="extra">
+
 		<label>ITEM</label>
 		<input type="text" class="datoTitulo">
+
 		<label>TURNO</label>
-		<input type="text" class="datoTitulo">
+		<select class="datoTitulo">
+			<option>C-1</option>
+			<option>C-2</option>
+			<option>C-3</option>
+		</select>
+
 		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTitulo()">
 		<label id="confirmacion"></label>
 	</div>
@@ -135,7 +142,7 @@
 
 <!--     Tabla Ensamble     -->
 	<input type="submit" name="verTabla" id='btnVer' value="Ver Tabla" class="btn-datos" onclick="verTabla()">
-	
+
 	<table id="tablaDatos">
 		<thead>
 			<tr class="contenedor_relleno">
