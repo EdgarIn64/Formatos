@@ -12,14 +12,9 @@ h1, h2 {
 }
 
 canvas {
-<<<<<<< HEAD
-    width: 500px;
-    height: 220px;
+    width: 480px;
+    height: 164px;
     margin-top: 10px;
-=======
-    width: 400px;
-    height: 120px;
->>>>>>> 188209d5b5ef0c0478ee71d6f28151c78f0c66fd
     background-color: white;
     border: 1px solid #c3c3c3;
 }
@@ -37,6 +32,7 @@ canvas {
 
 .menu table {
 	margin: 0px auto;
+	margin-bottom: 100px;
 	text-align: left;
 	border-radius: 10px;
 	box-shadow: 3px 3px 3px 3px #c7c7c7;
@@ -141,6 +137,7 @@ input[type='submit']:hover, button:hover {
 
 .btn-tabla {
 	margin: 20px auto;
+	margin-bottom: 100px;
 	background: #a1d9a1;
 	border-color: #87c7ba;
 	font-size: 1.4rem;

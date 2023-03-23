@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checklist</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+	<script src="../js/signature_pad.js"></script>
+</head>
+<body>
+	<a href="index.html">
+		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
+	</a>
+	<br><br>
+	<h1 id="titulo">Checklist</h1>
+	<div class="formulario">
+		<label>FECHA</label>
+		<input type="date" class="datoTitulo">
+
+		<label>No. Orden</label>
+		<input type="text" class="datoTitulo" id="extra">
+
+		<label>Ítem</label>
+		<input type="text" class="datoTitulo">
+		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTitulo()">
+		<label id="confirmacion"></label>
+	</div>
+
+
+<!--              Checklist              -->
+
+<!--     Formulario Checklist     -->
+
+	<div class="formulario" id="formTabla">
+		<h2 class="titulo">Checklist</h2>
+		<hr>
+		<label>Peso</label>
+		<input type="text" class="dato">
+
+		<label>Rotulación de caja de costura</label>
+		<input type="text" class="dato">
+
+		<label>Acomodo de material</label>
+		<input type="text" class="dato">
+
+		<label>Caja en buen estado</label>
+		<input type="text" class="dato">
+
+		<label>Código de barras (Costura)</label>
+		<input type="text" class="dato">
+
+		<label>Etiquetas pack box (Código de barras)</label>
+		<input type="text" class="dato">
+
+		<label>Costura</label>
+		<input type="text" class="dato">
+
+		<label>Impresión (Placa)</label>
+		<input type="text" class="dato">
+
+		<label>Valvulas</label>
+		<input type="text" class="dato">
+
+		<label>Tapas</label>
+		<input type="text" class="dato">
+
+		<label>Gasket bien colocado</label>
+		<input type="text" class="dato">
+
+		<label>Etiquetas de bolsa</label>
+		<input type="text" class="dato">
+
+		<label>Comentarios</label>
+		<input type="text" class="dato">
+
+		<label>INSPECTOR</label>
+		<input type="text" class="dato">
+
+		<!-- Botón para enviar datos -->
+		<input type="submit" name="aceptar" value="Enviar Datos" class="btn-datos" onclick="datos()">
+	</div>
+
+<!--     Tabla Checklist     -->
+
+	<table id="tablaDatos">
+		<thead>
+			<tr class="contenedor_relleno">
+				<th>FECHA:</th>
+				<td class="tdDatoTitulo"></td>
+				<th>NO. ORDEN:</th>
+				<td class="tdDatoTitulo"></td>
+				<th>ITEM:</th>
+				<td class="tdDatoTitulo"></td>
+			</tr>
+			<tr>
+				<th colspan="14">CHECKLIST DE LIBERACION DE PT</th>
+			</tr>
+			<tr>
+				<th>PESO</th>
+				<th>ROTULACION DE CAJA DE COSTURA</th>
+				<th>ACOMODO DE MATERIAL</th>
+				<th>CAJA EN BUEN ESTADO</th>
+				<th>CODIGO DE BARRAS (COSTURA)</th>
+				<th>ETIQUETAS PACK BOX (CODIGO DE BARRAS)</th>
+				<th>COSTURA</th>
+				<th>IMPRESION (PLACA)</th>
+				<th>VALVULAS</th>
+				<th>TAPAS</th>
+				<th>GASKET BIEN COLOCADO</th>
+				<th>ETIQUETAS DE BOLSA</th>
+				<th>COMENTARIOS</th>
+				<th>INSPECTOR</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	<input type="submit" name="aceptar" value="Descargar Tabla Checklist" class="btn-tabla" onclick="exportTableToExcel()">
+
+	<script type="text/javascript" src="../js/tabla.js"></script>
+</body>
+</html>

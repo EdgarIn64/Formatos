@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Text_rack-Empaque</title>
+	<title>Text rack Empaque</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="img/logo_icon.png">
-    <link rel="stylesheet" type="text/css" href="css/estilo.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/signature_pad.js"></script>
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+	<script src="../js/signature_pad.js"></script>
 </head>
+<body>
 	<a href="index.html">
-		<img class="regresar" src="img/flecha.png" alt="regresar" name="regresar">
+		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
 	</a>
-	<br>
-	<h1>Verificación de Contadores de</h1>
-	<h1 id="titulo">Text_rack-Empaque</h1>
+	<br><br>
+	<h1 id="titulo">Test Rack Empaque</h1>
 
 	<div class="formulario">
 		<div id="signature-pad" class="signature-pad" >
@@ -32,67 +31,74 @@
 		<label id="firmaGuardada1"></label>
 	</div>
 
-<!--              Text_rack-Empaque              -->
+<!--              Text rack              -->
 
-<!--     Formulario Text_rack-Empaque     -->
+<!--     Formulario Text rack     -->
 
 	<div class="formulario" id="formTabla">
-		<h2 class="titulo">Text_rack-Empaque</h2>
+		<h2 class="titulo">Text Rack</h2>
 		<hr>
-		<label>Número de Rollo</label>
+		<label>Caja</label>
+		<input type="number" class="dato">
+
+		<label>Comentarios del Empaque</label>
+		<input type="text" class="dato">
+
+		<label>Código de Empecador</label>
 		<input type="text" class="dato">
 
 		<label>¿Lleva código?</label>
 		<select class="dato">
-			<option value="Si" selected="">Si</option>
+			<option value="Si" selected>Si</option>
+			<option value="No">No</option>
+		</select>
+
+		<label>¿Pasa?</label>
+		<select class="dato">
+			<option value="Si" selected>Si</option>
 			<option value="No">No</option>
 		</select>
 
 		<label class="oculto">FIRMA DEL OPERADOR</label>
 		<input type="text" class="dato oculto">
 
-		<label>Día</label>
-		<input type="date" name="dia" class="dato">
-
 		<label>Hora</label>
 		<input type="time" class="dato">
+
+		<label>Día</label>
+		<input type="date" name="dia" class="dato">
 
 		<label>Inspector</label>
 		<input type="text" class="dato">
 
 		<!-- Botón para enviar datos -->
-		<input type="submit" name="aceptar" value="Enviar Datos" class="btn-datos" onclick="datos('Text_rack-Empaque')">
+		<input type="submit" name="aceptar" value="Enviar Datos" class="btn-datos" onclick="datos()">
 	</div>
 
-<!--     Tabla Text_rack-Empaque     -->
+<!--     Tabla Text_rack-Inflado     -->
 
 	<table id="tablaDatos">
 		<thead>
-			<tr class="contenedor_relleno">
-				<th>ORDEN:</th>
-				<td class="tdDatoTitulo">X</td>
-				<th>ITEM:</th>
-				<td class="tdDatoTitulo">X</td>
-				<th>TURNO:</th>
-				<td class="tdDatoTitulo">X</td>
+			<tr>
+				<th colspan="9">Text_rack-Inflado</th>
 			</tr>
 			<tr>
-				<th colspan="6">Text_rack-Empaque</th>
-			</tr>
-			<tr>
-				<th>NUM. ROLLO</th>
+				<th>CAJA</th>
+				<th>COMENTARIOS DEL EMPAQUE</th>
+				<th>CODIGO DEL EMPACADOR</th>
 				<th>LLEVA CODIGO (SI O NO)</th>
+				<th>PASA</th>
 				<th>FIRMA DEL OPERADOR</th>
-				<th>DIA</th>
 				<th>HORA</th>
+				<th>DIA</th>
 				<th>INSPECTOR</th>
 			</tr>
 		</thead>
 		<tbody></tbody>
 	</table>
-	<input type="submit" name="aceptar" value="Descargar Tabla Text_rack-Empaque" class="btn-tabla" onclick="exportTableToExcel('tablaDatos', 'SYN-CC-005 Text_rack-Empaque')">
+	<input type="submit" name="aceptar" value="Descargar Tabla Text Rack" class="btn-tabla" onclick="exportTableToExcel()">
 
-    <script src="js/tabla.js"></script>
-    <script src="js/firma.js"></script>
+	<script type="text/javascript" src="../js/tabla.js"></script>
+	<script type="text/javascript" src="../js/firma.js"></script>
 </body>
 </html>

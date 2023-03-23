@@ -1,82 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SYN-CC-005-FORM-02</title>
+	<title>Ponchado</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="img/logo_icon.png">
-	<link rel="stylesheet" type="text/css" href="css/estilo.css?v=11">
-	<script type="text/javascript" src="js/tabla.js?v=22"></script>
-<body onload="rellenarDatos()">
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+	<script src="../js/signature_pad.js"></script>
+</head>
+<body>
 	<a href="index.html">
-		<img class="regresar" src="img/flecha.png" alt="regresar" name="regresar">
+		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
 	</a>
+	<br><br>
+	<h1 id="titulo">Ponchado</h1>
 
-	<h1>
-		<a href="">Reiniciar</a>
-	</h1>
+	<div class="formulario">
+		<label>TURNO</label>
+		<select class="datoTitulo">
+			<option>C/1</option>
+			<option>C/2</option>
+			<option>C/3</option>
+		</select>
+		<label>FECHA</label>
+		<input type="date" class="datoTitulo" id="extra">
+		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTitulo()">
+		<label id="confirmacion"></label>
+	</div>
+
 
 <!--              Ponchado              -->
 
 <!--     Formulario Ponchado     -->
 
-	<div class="formulario" id="formPonchado">
-		<h2 class="titulo">CONTEO DE DEFECTOS TEST RACK</h2>
+	<div class="formulario" id="formTabla">
+		<h2 class="titulo">Ponchado</h2>
 		<hr>
-		<label>Número de Rollo</label>
+		<label>Orden</label>
 		<input type="text" class="dato">
 
-		<label>¿Lleva código?</label>
-		<select class="dato">
-			<option value="Si" selected="">Si</option>
-			<option value="No">No</option>
-		</select>
+		<label>Item</label>
+		<input type="text" class="dato">
 
-		<label class="oculto">FIRMA DEL OPERADOR</label>
-		<input type="text" class="dato oculto">
+		<label>Causa</label>
+		<input type="text" class="dato">
 
-		<label>Día</label>
-		<input type="date" name="dia" class="dato">
+		<label>Operador</label>
+		<input type="text" class="dato">
 
-		<label>Hora</label>
-		<input type="time" class="dato">
+		<label>Piezas</label>
+		<input type="text" class="dato">
 
-		<label>Inspector</label>
+		<label>Team Leader</label>
 		<input type="text" class="dato">
 
 		<!-- Botón para enviar datos -->
-		<input type="submit" name="aceptar" value="Enviar Datos" class="btn-datos" onclick="datos('Ponchado')">
+		<input type="submit" name="aceptar" value="Enviar Datos" class="btn-datos" onclick="datos()">
 	</div>
 
-<!--     Tabla Ponchado     -->
-	<p>Puedes descargar la tabla con el botón, o puedes subrayar la tabla y copiarlo a excel</p>
+<!--     Tabla Text_rack-Inflado     -->
 
-	<table id="tablaPonchado">
+	<table id="tablaDatos">
 		<thead>
 			<tr class="contenedor_relleno">
-				<th>ORDEN:</th>
-				<td class="rellenar">X</td>
-				<th>ITEM:</th>
-				<td class="rellenar">X</td>
 				<th>TURNO:</th>
-				<td class="rellenar">X</td>
+				<td class="tdDatoTitulo"></td>
+				<th>FECHA:</th>
+				<td class="tdDatoTitulo"></td>
 			</tr>
 			<tr>
-				<th colspan="6">Ponchado</th>
+				<th colspan="6">CONTEO DE DEFECTOS TEST RACK</th>
 			</tr>
 			<tr>
-				<th>NUM. ROLLO</th>
-				<th>LLEVA CODIGO (SI O NO)</th>
-				<th>FIRMA DEL OPERADOR</th>
-				<th>DIA</th>
-				<th>HORA</th>
-				<th>INSPECTOR</th>
+				<th>ORDEN</th>
+				<th>ITEM</th>
+				<th>CAUSA</th>
+				<th>OPERADOR</th>
+				<th>PIEZAS</th>
+				<th>TEAM LEADER</th>
 			</tr>
 		</thead>
 		<tbody></tbody>
 	</table>
-	<p>...</p>
-	<input type="submit" name="aceptar" value="Descargar Tabla Ponchado" class="btn-tabla" onclick="tableToExcel('tablaPonchado', 'SYN-CC-003-Form-02 Ponchado')">
+	<input type="submit" name="aceptar" value="Descargar Tabla Ponchado" class="btn-tabla" onclick="exportTableToExcel()">
 
+	<script type="text/javascript" src="../js/tabla.js"></script>
 </body>
 </html>

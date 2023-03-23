@@ -1,147 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SYN-CC-005-FORM-04</title>
+	<title>Embarque</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="../img/logo_icon.png">
 	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
-	<script type="text/javascript" src="../js/tabla.js"></script>
+	<script src="../js/signature_pad.js"></script>
+</head>
 <body>
 	<a href="index.html">
-		<img class="regresar" src="img/flecha.png" alt="regresar" name="regresar">
+		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
 	</a>
+	<br><br>
+	<h1 id="titulo">Embarque</h1>
 
-	<h1>
-		<a href="">Reiniciar</a>
-	</h1>
+	<div class="formulario">
+		<label>ORDEN</label>
+		<input type="text" class="datoTitulo" id="extra">
+		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTitulo()">
+		<label id="confirmacion"></label>
+	</div>
 
-<!--              Detenido              -->
+	<div class="formulario">
+		<div id="signature-pad" class="signature-pad" >
+			<h2>Firma del Operador</h2>
+			<select id="selectFirma">
+				<option value="1">Quien Compuso</option>
+				<option value="2">Team Leader</option>
+			</select>
+			<label for="nombreFirma">Nombre del Operador</label>
+			<input type="text" name="nombreFirma" id="nombreFirma">
+			<hr>
+			<label>Firma</label>
+			<div class="signature-pad--body">
+				<canvas id="canvas"></canvas>
+			</div>
+		</div>
+		
+		<button id="guardar" name="guardar" class="btn-datos">Guardar Firma del Operador</button>
+		<p>Quien Compuso: <label id="firmaGuardada1">---</label></p>
+		<p>Team Leader: <label id="firmaGuardada2">---</label></p>
+	</div>
 
-<!--     Formulario Detenido     -->
+<!--              Embarque              -->
 
-	<div class="formulario" id="formDetenido">
-		<h2 class="titulo">Detenido</h2>
+<!--     Formulario Embarque     -->
+
+	<div class="formulario" id="formTabla">
+		<h2 class="titulo">Embarque</h2>
 		<hr>
-		<label>Número de Rollo</label>
+<!--    Detenido    -->
+		<label>Fecha</label>
+		<input type="date" class="dato">
+
+		<label>Número de Caja</label>
+		<input type="number" class="dato">
+
+		<label>Motivo de la detención</label>
 		<input type="text" class="dato">
 
-		<label>¿Lleva código?</label>
+		<label>Inspector que detiene</label>
+		<input type="text" class="dato">
+
+<!--    Liberación para Embarque    -->
+
+		<label>Fecha en que se compone la caja</label>
+		<input type="date" class="dato">
+
+		<label class="oculto">FIRMA QUIEN COMPUSO</label>
+		<input type="text" class="dato oculto">
+
+		<label class="oculto">FIRMA DEL TEAM LEADER</label>
+		<input type="text" class="dato oculto">
+
+		<label>Pasa?</label>
 		<select class="dato">
-			<option value="Si" selected="">Si</option>
+			<option value="Si" selected>Si</option>
 			<option value="No">No</option>
 		</select>
 
-		<label class="oculto">FIRMA DEL OPERADOR</label>
-		<input type="text" class="dato oculto">
+		<label>Fecha de liberación</label>
+		<input type="date" class="dato">
 
-		<label>Día</label>
-		<input type="date" name="dia" class="dato">
-
-		<label>Hora</label>
-		<input type="time" class="dato">
-
-		<label>Inspector</label>
+		<label>Inspector que libera</label>
 		<input type="text" class="dato">
 
 		<!-- Botón para enviar datos -->
-		<input type="submit" name="aceptar" value="Enviar Datos" class="btn-datos" onclick="datos('Detenido')">
+		<input type="submit" name="aceptar" value="Enviar Datos" class="btn-datos" onclick="datos()">
 	</div>
 
-<!--     Tabla Detenido     -->
-	<p>Puedes descargar la tabla con el botón, o puedes subrayar la tabla y copiarlo a excel</p>
+<!--     Tabla Text_rack-Inflado     -->
 
-	<table id="tablaDetenido">
+	<table id="tablaDatos">
 		<thead>
 			<tr class="contenedor_relleno">
 				<th>ORDEN:</th>
-				<td class="rellenar">X</td>
-				<th>ITEM:</th>
-				<td class="rellenar">X</td>
-				<th>TURNO:</th>
-				<td class="rellenar">X</td>
+				<td class="tdDatoTitulo"></td>
 			</tr>
 			<tr>
-				<th colspan="6">Detenido</th>
+				<th colspan="13">LIBERACIÓN DE CAJAS DETENIDAS</th>
 			</tr>
 			<tr>
-				<th>NUM. ROLLO</th>
-				<th>LLEVA CODIGO (SI O NO)</th>
-				<th>FIRMA DEL OPERADOR</th>
-				<th>DIA</th>
-				<th>HORA</th>
-				<th>INSPECTOR</th>
+				<th colspan="4">DETENIDO</th>
+				<th colspan="9">LIBERACION PARA EMBARQUE</th>
+			</tr>
+			<tr>
+<!--    DETENIDO    -->
+				<th>FECHA</th>
+				<th>NUM. CAJA</th>
+				<th>MOTIVO DE LA DETENCION</th>
+				<th>INSPECTOR QUE DETIENE</th>
+<!--    LIBERACION    -->
+				<th>FECHA EN QUE SE COMPONE LA CAJA</th>
+				<th>NOMBRE Y FIRMA QUIEN COMPUSO</th>
+				<th>NOMBRE Y FIRMA DEL TEAM LEADER</th>
+				<th>PASA</th>
+				<th>FECHA DE LIBERACION</th>
+				<th>INSPECTOR QUE LIBERA</th>
 			</tr>
 		</thead>
 		<tbody></tbody>
 	</table>
-	<p>...</p>
-	<input type="submit" name="aceptar" value="Descargar Tabla Detenido" class="btn-tabla" onclick="tableToExcel('tablaDetenido', 'SYN-CC-003-Form-02 Detenido')">
+	<input type="submit" name="aceptar" value="Descargar Tabla Embarque" class="btn-tabla" onclick="exportTableToExcel()">
 
-	<hr>
-
-<!--              Liberacion              -->
-
-<!--     Formulario Liberacion     -->
-
-	<div class="formulario" id="formLiberacion">
-		<h2 class="titulo">LIBERACIÓN PARA EMBARQUE</h2>
-		<hr>
-		<label>Número de Rollo</label>
-		<input type="text" class="dato">
-
-		<label>¿Lleva código?</label>
-		<select class="dato">
-			<option value="Si" selected="">Si</option>
-			<option value="No">No</option>
-		</select>
-
-		<label class="oculto">FIRMA DEL OPERADOR</label>
-		<input type="text" class="dato oculto">
-
-		<label>Día</label>
-		<input type="date" name="dia" class="dato">
-
-		<label>Hora</label>
-		<input type="time" class="dato">
-
-		<label>Inspector</label>
-		<input type="text" class="dato">
-
-		<!-- Botón para enviar datos -->
-		<input type="submit" name="aceptar" value="Enviar Datos" class="btn-datos" onclick="datos('Liberacion')">
-	</div>
-
-<!--     Tabla Liberacion     -->
-	<p>Puedes descargar la tabla con el botón, o puedes subrayar la tabla y copiarlo a excel</p>
-
-	<table id="tablaLiberacion">
-		<thead>
-			<tr class="contenedor_relleno">
-				<th>ORDEN:</th>
-				<td class="rellenar">X</td>
-				<th>ITEM:</th>
-				<td class="rellenar">X</td>
-				<th>TURNO:</th>
-				<td class="rellenar">X</td>
-			</tr>
-			<tr>
-				<th colspan="6">Liberacion</th>
-			</tr>
-			<tr>
-				<th>NUM. ROLLO</th>
-				<th>LLEVA CODIGO (SI O NO)</th>
-				<th>FIRMA DEL OPERADOR</th>
-				<th>DIA</th>
-				<th>HORA</th>
-				<th>INSPECTOR</th>
-			</tr>
-		</thead>
-		<tbody></tbody>
-	</table>
-	<p>...</p>
-	<input type="submit" name="aceptar" value="Descargar Tabla Liberacion" class="btn-tabla" onclick="tableToExcel('tablaLiberacion', 'SYN-CC-003-Form-02 Liberacion')">
-
-
+	<script type="text/javascript" src="../js/tabla.js"></script>
+	<script type="text/javascript" src="../js/firma.js"></script>
 </body>
 </html>
