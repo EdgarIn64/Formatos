@@ -12,17 +12,24 @@
 	<a href="index.html">
 		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
 	</a>
-	<br>
+	<br><br><br>
 	<h1>Rutina de Inspección de Preparación</h1>
 	<h1 id="titulo">Valver</h1>
 
 	<div class="formulario">
 		<label>ORDEN</label>
 		<input type="text" class="datoTitulo" id="extra">
+
 		<label>ITEM</label>
 		<input type="text" class="datoTitulo">
+
 		<label>TURNO</label>
-		<input type="text" class="datoTitulo">
+		<select class="datoTitulo">
+			<option>C-1</option>
+			<option>C-2</option>
+			<option>C-3</option>
+		</select>
+
 		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTitulo()">
 		<label id="confirmacion"></label>
 	</div>
