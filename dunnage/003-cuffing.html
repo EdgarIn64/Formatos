@@ -12,7 +12,7 @@
 	<a href="index.html">
 		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
 	</a>
-	<br><br>
+	<br><br><br>
 	<h1>Rutina de Inspección de Preparación</h1>
 	<h1 id="titulo">Cuffing</h1>
 
@@ -88,6 +88,7 @@
 	</div>
 
 <!--     Tabla Cuffing      -->
+	<input type="submit" name="verTabla" id='btnVer' value="Ver Tabla" class="btn-datos" onclick="verTabla()">
 
 	<table id="tablaDatos">
 		<thead>
@@ -116,7 +117,12 @@
 		</thead>
 		<tbody></tbody>
 	</table>
+	
 	<input type="submit" name="aceptar" value="Descargar Tabla Cuffing" class="btn-tabla" onclick="exportTableToExcel()">
+
+	<a href="index.html">
+		<img src="../img/flecha.png" height="75" alt="regresar">
+	</a>
 
 	<script type="text/javascript" src="../js/tabla.js"></script>
 	<script type="text/javascript" src="../js/firma.js"></script>

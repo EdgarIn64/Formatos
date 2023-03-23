@@ -12,13 +12,13 @@
 	<a href="index.html">
 		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
 	</a>
-	<br>
+	<br><br><br>
 	<h1>Rutina de Inspección</h1>
 	<h1 id="titulo">Ensamble</h1>
 
 	<div class="formulario">
 		<label>ORDEN</label>
-		<input type="text" class="datoTitulo">
+		<input type="text" class="datoTitulo" id="extra">
 		<label>ITEM</label>
 		<input type="text" class="datoTitulo">
 		<label>TURNO</label>
@@ -26,25 +26,28 @@
 		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTitulo()">
 		<label id="confirmacion"></label>
 	</div>
-
+	
 	<div class="formulario">
 		<div id="signature-pad" class="signature-pad" >
-			<h3>Firma del Operador</h3>
+			<h2>Firma del Operador</h2>
+			<select id="selectFirma">
+				<option value="1">Insertado</option>
+				<option value="2">Costura</option>
+			</select>
+			<label for="nombreFirma">Nombre del Operador</label>
+			<input type="text" name="nombreFirma" id="nombreFirma">
+			<hr>
+			<label>Firma</label>
 			<div class="signature-pad--body">
 				<canvas id="canvas"></canvas>
 			</div>
 		</div>
 		
-		<select id="selectFirma">
-			<option value="1">Insertado</option>
-			<option value="2">Costura</option>
-		</select>
-
-		<input type="text" name="nombreFirma" id="nombreFirma">
 		<button id="guardar" name="guardar" class="btn-datos">Guardar Firma del Operador</button>
 		<p>Insertado: <label id="firmaGuardada1">---</label></p>
 		<p>Costura: <label id="firmaGuardada2">---</label></p>
 	</div>
+
 
 <!--              Ensamble              -->
 
@@ -131,6 +134,8 @@
 	</div>
 
 <!--     Tabla Ensamble     -->
+	<input type="submit" name="verTabla" id='btnVer' value="Ver Tabla" class="btn-datos" onclick="verTabla()">
+	
 	<table id="tablaDatos">
 		<thead>
 			<tr class="contenedor_relleno">
@@ -172,7 +177,11 @@
 		</thead>
 		<tbody></tbody>
 	</table>
-	<input type="submit" name="aceptar" value="Descargar Tabla Insertado" class="btn-tabla" onclick="exportTableToExcel('tablaDatos', 'SYN-CC-004 Ensamble')">
+	<input type="submit" name="aceptar" value="Descargar Tabla Insertado" class="btn-tabla" onclick="exportTableToExcel()">
+
+	<a href="index.html">
+		<img src="../img/flecha.png" height="75" alt="regresar">
+	</a>
 
 	<script type="text/javascript" src="../js/tabla.js"></script>
 	<script type="text/javascript" src="../js/firma.js"></script>

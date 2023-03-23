@@ -12,7 +12,7 @@
 	<a href="index.html">
 		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
 	</a>
-	<br><br>
+	<br><br><br>
 	<h1 id="titulo">Checklist</h1>
 	<div class="formulario">
 		<label>FECHA</label>
@@ -82,6 +82,7 @@
 	</div>
 
 <!--     Tabla Checklist     -->
+	<input type="submit" name="verTabla" id='btnVer' value="Ver Tabla" class="btn-datos" onclick="verTabla()">
 
 	<table id="tablaDatos">
 		<thead>
@@ -115,7 +116,12 @@
 		</thead>
 		<tbody></tbody>
 	</table>
+	
 	<input type="submit" name="aceptar" value="Descargar Tabla Checklist" class="btn-tabla" onclick="exportTableToExcel()">
+
+	<a href="index.html">
+		<img src="../img/flecha.png" height="75" alt="regresar">
+	</a>
 
 	<script type="text/javascript" src="../js/tabla.js"></script>
 </body>

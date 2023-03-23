@@ -12,8 +12,9 @@
 	<a href="index.html">
 		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
 	</a>
-	<br><br>
+	<br><br><br>
 	<h1 id="titulo">Test Rack Empaque</h1>
+	<input type="text" value="" id="extra" style="display: none;">
 
 	<div class="formulario">
 		<div id="signature-pad" class="signature-pad" >
@@ -75,12 +76,13 @@
 		<input type="submit" name="aceptar" value="Enviar Datos" class="btn-datos" onclick="datos()">
 	</div>
 
-<!--     Tabla Text_rack-Inflado     -->
+<!--     Tabla Empaque     -->
+	<input type="submit" name="verTabla" id='btnVer' value="Ver Tabla" class="btn-datos" onclick="verTabla()">
 
 	<table id="tablaDatos">
 		<thead>
 			<tr>
-				<th colspan="9">Text_rack-Inflado</th>
+				<th colspan="9">Empaque</th>
 			</tr>
 			<tr>
 				<th>CAJA</th>
@@ -96,7 +98,12 @@
 		</thead>
 		<tbody></tbody>
 	</table>
-	<input type="submit" name="aceptar" value="Descargar Tabla Text Rack" class="btn-tabla" onclick="exportTableToExcel()">
+
+	<input type="submit" name="aceptar" value="Descargar Tabla Empaque" class="btn-tabla" onclick="exportTableToExcel()">
+
+	<a href="index.html">
+		<img src="../img/flecha.png" height="75" alt="regresar">
+	</a>
 
 	<script type="text/javascript" src="../js/tabla.js"></script>
 	<script type="text/javascript" src="../js/firma.js"></script>

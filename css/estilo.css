@@ -12,11 +12,15 @@ h1, h2 {
 }
 
 canvas {
-    width: 480px;
-    height: 164px;
+    width: 500px;
+    height: 200px;
     margin-top: 10px;
     background-color: white;
-    border: 1px solid #c3c3c3;
+    border: 2px solid #c3c3c3;
+}
+
+#tablaDatos {
+	display: none;
 }
 
 .firmaMensaje {
@@ -97,7 +101,7 @@ tr.contenedor_relleno td, tr.contenedor_relleno th {
 	text-align: left;
 	font-size: 1.4rem;
 	padding: 15px;
-	margin: 15px auto;
+	margin: 25px auto;
 	border: 1px solid black;
 	background: #edeffe;
 	border-radius: 10px;
@@ -109,15 +113,20 @@ tr.contenedor_relleno td, tr.contenedor_relleno th {
 	margin: 10px;
 }
 
+table {
+	margin: 20px auto;
+}
+
 input, select {
 	display: block;
 	padding: 5px;
 	background: white;
 }
 
-table {
-	margin: 20px auto;
+option {
+	font-size: 1.7rem;
 }
+
 
 input, label, select {
 	font-size: 1.5rem;
@@ -137,7 +146,7 @@ input[type='submit']:hover, button:hover {
 
 .btn-tabla {
 	margin: 20px auto;
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 	background: #a1d9a1;
 	border-color: #87c7ba;
 	font-size: 1.4rem;

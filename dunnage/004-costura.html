@@ -11,7 +11,7 @@
 	<a href="index.html">
 		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
 	</a>
-	<br>
+	<br><br><br>
 	<h1>Verificación de Contadores de</h1>
 	<h1 id="titulo">Costura</h1>
 
@@ -94,6 +94,7 @@
 	</div>
 
 <!--     Tabla Costura     -->
+	<input type="submit" name="verTabla" id='btnVer' value="Ver Tabla" class="btn-datos" onclick="verTabla()">
 
 	<table id="tablaDatos">
 		<thead>
@@ -121,7 +122,12 @@
 		</thead>
 		<tbody></tbody>
 	</table>
+	
 	<input type="submit" name="aceptar" value="Descargar Tabla Costura" class="btn-tabla" onclick="exportTableToExcel()">
+
+	<a href="index.html">
+		<img src="../img/flecha.png" height="75" alt="regresar">
+	</a>
 
     <script src="../js/tabla.js"></script>
     <script src="../js/firma.js"></script>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Corte</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+	<script src="../js/signature_pad.js"></script>
+</head>
+<body>
+	<a href="index.html">
+		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
+	</a>
+	<br><br>
+	<h1>Monitoreo de Proceso Área de</h1>
+	<h1 id="titulo">Corte</h1>
+
+	<div class="formulario">
+		<label>ITEM</label>
+		<input type="text" class="datoTitulo">
+		
+		<label>ORDEN</label>
+		<input type="text" class="datoTitulo" id="extra">
+		
+		<label>CANTIDAD</label>
+		<input type="number" class="datoTitulo">
+		
+		<!-- 2 -->
+		<label>CLIENTE</label>
+		<input type="text" class="datoTitulo" value="STYROPEK">
+
+		<label>TIPO DE SACO</label>
+		<input type="text" class="datoTitulo" value="U-PANEL">
+
+		<label>FECHA DE INICIO</label>
+		<input type="text" class="datoTitulo">
+		
+		<!-- 3 -->
+		<label>LAMINADO</label>
+		<select class="datoTitulo">
+			<option>ADENTRO</option>
+			<option>AFUERA</option>
+		</select>
+
+		<label>DOBLADILLOS</label>
+		<select class="datoTitulo">
+			<option>ADENTRO</option>
+			<option>AFUERA</option>
+		</select>
+
+		<label>DOBLADILLOS</label>
+		<select class="datoTitulo">
+			<option>PEGADO</option>
+			<option selected>COSTURADOS</option>
+		</select>
+
+		<!-- 4 -->
+
+		<label>TURNO</label>
+		<select class="datoTitulo">
+			<option>1°</option>
+			<option>2°</option>
+		</select>
+
+		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTitulo()">
+		<label id="confirmacion"></label>
+	</div>
+
+	<div class="formulario">
+		<div id="signature-pad" class="signature-pad" >
+			<h2>Firma del Operador</h2>
+			<label for="nombreFirma">Nombre del Operador</label>
+			<input type="text" name="nombreFirma" id="nombreFirma">
+			<hr>
+			<label>Firma</label>
+			<div class="signature-pad--body">
+				<canvas id="canvas"></canvas>
+			</div>
+		</div>
+		
+		<button id="guardar" name="guardar" class="btn-datos">Guardar Firma</button>
+		<p><label id="firmaGuardada1">---</label></p>
+	</div>
+
+<!--             CORTE           -->
+
+<!--    FORMULARIO CORTE    -->
+
+	<div class="formulario" id="formTabla">
+		<h2 class="titulo">IMPRESIÓN</h2>
+		<hr>
+		<label>Corte De:</label>
+		<select>
+			<option>CUERPO</option>
+			<option>LATERAL</option>
+			<option>TAPA O FALDON</option>
+			<option>V. CARGA</option>
+			<option>V. DESCARGA</option>
+			<option>JARETA</option>
+			<option>FLAP</option>
+			<option>BAFFLE</option>
+			<option>CINTURON</option>
+			<option>CINTA V.</option>
+			<option>CINTA V.</option>
+			<option>CINTA V.</option>
+		</select>
+		<label>Número de Rollo</label>
+		<input type="number" class="dato">
+
+		<label>Ancho</label>
+		<input type="number" class="dato">
+
+		<label>Largo</label>
+		<input type="number" class="dato">
+
+		<label>Maq</label>
+		<input type="text" class="dato">
+
+		<label>Operador</label>
+		<input type="text" class="dato">
+
+		<label class="oculto">FIRMA DEL OPERADOR</label>
+		<input type="text" class="dato oculto" value="---">
+
+		<label>Inspector</label>
+		<input type="text" class="dato">
+
+		<label>Fecha</label>
+		<input type="date" class="dato">
+
+		<label>Hora</label>
+		<input type="time" class="dato">
+
+		<!-- Botón para enviar datos -->
+		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datos(2)">
+	</div>
+
+<!--    TABLA IMPRESIÓN    -->
+	<table id="tablaDatos">
+		<thead>
+			<tr class="contenedor_relleno">
+				<th>ITEM</th>
+				<td class="tdDatoTitulo"></td>
+				<th>CLIENTE</th>
+				<td class="tdDatoTitulo"></td>
+				<th>LAMINADO</th>
+				<td class="tdDatoTitulo"></td>
+			</tr>
+			<tr class="contenedor_relleno">
+				<th>CLIENTE</th>
+				<td class="tdDatoTitulo"></td>
+				<th>TIPO DE SACO</th>
+				<td class="tdDatoTitulo"></td>
+				<th>FECHA DE INICIO</th>
+				<td class="tdDatoTitulo"></td>
+			</tr>
+			<tr class="contenedor_relleno">
+				<th>LAMINADO</th>
+				<td class="tdDatoTitulo"></td>
+				<th>DOBLADILLOS</th>
+				<td class="tdDatoTitulo"></td>
+				<th>DOBLADILLOS</th>
+				<td class="tdDatoTitulo"></td>
+				<th>TURNO</th>
+				<td class="tdDatoTitulo"></td>
+			</tr>
+			<tr>
+				<th>CORTE DE: </th>
+				<th>NUM. R</th>
+				<th>ANCHO</th>
+				<th>LARGO</th>
+				<th>MAQ</th>
+				<th>OPERADOR</th>
+				<th>FIRMA</th>
+				<th>INSP</th>
+				<th>FECHA</th>
+				<th>HORA</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	<br>
+	<input type="submit" name="aceptar" value="Descargar Tabla Corte Impresión" class="btn-tabla" onclick="exportTableToExcel()">
+
+	<script type="text/javascript" src="../js/tabla.js"></script>
+	<script type="text/javascript" src="../js/firma.js"></script>
+</body>
+</html>

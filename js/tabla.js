@@ -1,3 +1,16 @@
+function verTabla() {
+    let tablaDatos = document.getElementById('tablaDatos')
+    let btnVer = document.getElementById('btnVer')
+    if (btnVer.value=='Ver Tabla') {
+		tablaDatos.style.display = 'block'
+		btnVer.value = 'Ocultar Tabla'
+    }	
+    else {
+        tablaDatos.style.display = 'none'
+		btnVer.value = 'Ver Tabla'
+    }
+}
+
 function datosTitulo() {
     let bandera = true
     let datos = document.getElementsByClassName('datoTitulo')

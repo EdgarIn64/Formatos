@@ -12,7 +12,7 @@
 	<a href="index.html">
 		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
 	</a>
-	<br><br>
+	<br><br><br>
 	<h1>Rutina de Inspección de Preparación</h1>
 	<h1 id="titulo">Corte Impresión</h1>
 
@@ -114,10 +114,12 @@
 		<input type="text" class="dato">
 
 		<!-- Botón para enviar datos -->
-		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datos(2)">
+		<input type="submit" name="aceptar" value="Enviar Datos" class="btn-datos" onclick="datos(2)">
 	</div>
 
 <!--    TABLA IMPRESIÓN    -->
+	<input type="submit" name="verTabla" id='btnVer' value="Ver Tabla" class="btn-datos" onclick="verTabla()">
+
 	<table id="tablaDatos">
 		<thead>
 			<tr class="contenedor_relleno">
@@ -156,6 +158,10 @@
 	</table>
 	<br>
 	<input type="submit" name="aceptar" value="Descargar Tabla Corte Impresión" class="btn-tabla" onclick="exportTableToExcel()">
+
+	<a href="index.html">
+		<img src="../img/flecha.png" height="75" alt="regresar">
+	</a>
 
 	<script type="text/javascript" src="../js/tabla.js"></script>
 	<script type="text/javascript" src="../js/firma.js"></script>
