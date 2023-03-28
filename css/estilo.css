@@ -19,8 +19,9 @@ canvas {
     border: 2px solid #c3c3c3;
 }
 
-#tablaDatos {
+table#tablaDatos {
 	display: none;
+	margin: 0px auto;
 }
 
 .firmaMensaje {
@@ -29,7 +30,7 @@ canvas {
 	left: 0;
 }
 
-.oculto {
+.oculto, .linea {
 	display: none;
 }
 
@@ -122,11 +123,6 @@ input, select {
 	padding: 5px;
 	background: white;
 }
-
-option {
-	font-size: 1.7rem;
-}
-
 
 input, label, select {
 	font-size: 1.5rem;

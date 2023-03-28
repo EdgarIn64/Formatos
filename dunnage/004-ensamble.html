@@ -14,11 +14,32 @@
 	</a>
 	<br><br><br>
 	<h1>Rutina de Inspección</h1>
+	<input type="hidden" value="" id="extra">
 	<h1 id="titulo">Ensamble</h1>
 
 	<div class="formulario">
+		<label>LÍNEA</label>
+		<select id="linea">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+			<option>7</option>
+			<option>8</option>
+			<option>9</option>
+			<option>10</option>
+			<option>11</option>
+			<option>12</option>
+			<option>13</option>
+			<option>14</option>
+			<option>15</option>
+			<option>16</option>
+		</select>
+
 		<label>ORDEN</label>
-		<input type="text" class="datoTitulo" id="extra">
+		<input type="text" class="datoTitulo" id="orden">
 
 		<label>ITEM</label>
 		<input type="text" class="datoTitulo">
@@ -30,7 +51,7 @@
 			<option>C-3</option>
 		</select>
 
-		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTitulo()">
+		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTituloLinea()">
 		<label id="confirmacion"></label>
 	</div>
 	
@@ -66,8 +87,8 @@
 		<label>Número de Rollo</label>
 		<input type="text" class="dato">
 
-		<label>Línea</label>
-		<input type="text" class="dato">
+		<label class="linea">Línea</label>
+		<input type="text" class="dato linea">
 
 		<label>Medida del Doblez</label>
 		<input type="text" class="dato">

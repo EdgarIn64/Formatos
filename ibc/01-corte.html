@@ -9,10 +9,7 @@
 	<script src="../js/signature_pad.js"></script>
 </head>
 <body>
-	<a href="index.html">
-		<img class="regresar" src="../img/flecha.png" alt="regresar" name="regresar">
-	</a>
-	<br><br>
+	<br><br><br><br>
 	<h1>Monitoreo de Proceso Área de</h1>
 	<h1 id="titulo">Corte</h1>
 
@@ -83,12 +80,11 @@
 		<p><label id="firmaGuardada1">---</label></p>
 	</div>
 
-<!--             CORTE           -->
 
-<!--    FORMULARIO CORTE    -->
+<!--    FORMULARIO    -->
 
 	<div class="formulario" id="formTabla">
-		<h2 class="titulo">IMPRESIÓN</h2>
+		<h2 class="titulo">CORTE</h2>
 		<hr>
 		<label>Corte De:</label>
 		<select>
@@ -101,9 +97,9 @@
 			<option>FLAP</option>
 			<option>BAFFLE</option>
 			<option>CINTURON</option>
-			<option>CINTA V.</option>
-			<option>CINTA V.</option>
-			<option>CINTA V.</option>
+			<option>CINTA V. CARGA</option>
+			<option>CINTA V. DESCARGA</option>
+			<option>CINTA JARETA</option>
 		</select>
 		<label>Número de Rollo</label>
 		<input type="number" class="dato">
@@ -133,10 +129,12 @@
 		<input type="time" class="dato">
 
 		<!-- Botón para enviar datos -->
-		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datos(2)">
+		<input type="submit" name="aceptar" value="Enviar Datos" class="btn-datos" onclick="datos()">
 	</div>
 
-<!--    TABLA IMPRESIÓN    -->
+<!--    TABLA    -->
+	<input type="submit" name="verTabla" id='btnVer' value="Ver Tabla" class="btn-datos" onclick="verTabla()">
+
 	<table id="tablaDatos">
 		<thead>
 			<tr class="contenedor_relleno">
@@ -180,7 +178,7 @@
 		</thead>
 		<tbody></tbody>
 	</table>
-	<br>
+
 	<input type="submit" name="aceptar" value="Descargar Tabla Corte Impresión" class="btn-tabla" onclick="exportTableToExcel()">
 
 	<script type="text/javascript" src="../js/tabla.js"></script>

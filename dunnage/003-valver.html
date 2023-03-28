@@ -15,10 +15,31 @@
 	<br><br><br>
 	<h1>Rutina de Inspección de Preparación</h1>
 	<h1 id="titulo">Valver</h1>
+	<input type="hidden" value="" id="extra">
 
 	<div class="formulario">
+		<label>LÍNEA</label>
+		<select id="linea">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+			<option>7</option>
+			<option>8</option>
+			<option>9</option>
+			<option>10</option>
+			<option>11</option>
+			<option>12</option>
+			<option>13</option>
+			<option>14</option>
+			<option>15</option>
+			<option>16</option>
+		</select>
+
 		<label>ORDEN</label>
-		<input type="text" class="datoTitulo" id="extra">
+		<input type="text" class="datoTitulo" id="orden">
 
 		<label>ITEM</label>
 		<input type="text" class="datoTitulo">
@@ -30,7 +51,7 @@
 			<option>C-3</option>
 		</select>
 
-		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTitulo()">
+		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTituloLinea()">
 		<label id="confirmacion"></label>
 	</div>
 
@@ -47,7 +68,7 @@
 			</div>
 		</div>
 		<button id="guardar" name="guardar" class="btn-datos">Guardar Firma</button>
-		<label id="firmaGuardada1"></label>
+		<label id="firmaGuardada1">---</label>
 	</div>
 
 <!--              Valver              -->
@@ -60,8 +81,8 @@
 		<label>Número de Rollo</label>
 		<input type="text" class="dato">
 
-		<label>Línea</label>
-		<input type="text" class="dato">
+		<label class="linea">Línea</label>
+		<input type="text" class="dato linea">
 
 		<label>PSI Prueba</label>
 		<input type="text" class="dato">
@@ -122,7 +143,6 @@
 				<td class="tdDatoTitulo">X</td>
 			</tr>
 			<tr>
-				<th colspan="11">Valver</th>
 			</tr>
 			<tr>
 				<th colspan="2"></th>
@@ -132,10 +152,10 @@
 				<th>NUM. ROLLO</th>
 				<th>LINEA</th>
 				<th>PSI PRUEBA</th>
-				<th>¿PASA?</th>
+				<th>PASA?</th>
 				<th>SELLO END SEALER</th>
 				<th>CODIGO DEL OPERADOR</th>
-				<th>LLEVA CODIGO (SI O NO)</th>
+				<th>LLEVA CODIGO?</th>
 				<th>FIRMA DEL OPERADOR</th>
 				<th>DIA</th>
 				<th>HORA</th>

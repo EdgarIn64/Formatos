@@ -15,10 +15,31 @@
 	<br><br><br>
 	<h1>Rutina de Inspección de Preparación</h1>
 	<h1 id="titulo">Cuffing</h1>
+	<input type="hidden" value="" id="extra">
 
 	<div class="formulario">
+		<label>LÍNEA</label>
+		<select id="linea">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+			<option>7</option>
+			<option>8</option>
+			<option>9</option>
+			<option>10</option>
+			<option>11</option>
+			<option>12</option>
+			<option>13</option>
+			<option>14</option>
+			<option>15</option>
+			<option>16</option>
+		</select>
+
 		<label>ORDEN</label>
-		<input type="text" class="datoTitulo" id="extra">
+		<input type="text" class="datoTitulo" id="orden">
 		<label>ITEM</label>
 		<input type="text" class="datoTitulo">
 		<label>TURNO</label>
@@ -27,7 +48,7 @@
 			<option>C-2</option>
 			<option>C-3</option>
 		</select>
-		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTitulo()">
+		<input type="submit" name="aceptar" value="Aceptar" class="btn-datos" onclick="datosTituloLinea()">
 		<label id="confirmacion"></label>
 	</div>
 
@@ -57,8 +78,8 @@
 		<label for="rollo">Número de Rollo</label>
 		<input type="number" name="rollo" class="dato">
 
-		<label for="linea">Línea</label>
-		<input type="text" name="linea" class="dato">
+		<label class="linea">Línea</label>
+		<input type="text" name="linea" class="dato linea">
 
 		<label for="fold">FOLD</label>
 		<input type="text" name="fold" class="dato">

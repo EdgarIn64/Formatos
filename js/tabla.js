@@ -2,7 +2,7 @@ function verTabla() {
     let tablaDatos = document.getElementById('tablaDatos')
     let btnVer = document.getElementById('btnVer')
     if (btnVer.value=='Ver Tabla') {
-		tablaDatos.style.display = 'block'
+		tablaDatos.style.display = 'table'
 		btnVer.value = 'Ocultar Tabla'
     }	
     else {
@@ -12,9 +12,8 @@ function verTabla() {
 }
 
 function datosTitulo() {
-    let bandera = true
     let datos = document.getElementsByClassName('datoTitulo')
-    if (bandera && datos.length > 0) {
+    if (datos.length > 0) {
         let tdDatoTitulo = document.getElementsByClassName('tdDatoTitulo')
         for (var i = 0; i < datos.length; i++) {
             tdDatoTitulo[i].innerHTML = datos[i].value
@@ -25,6 +24,16 @@ function datosTitulo() {
     setTimeout(function() {
         confirmacion.innerHTML = ''
     }, 5000);
+}
+
+function datosTituloLinea() {
+    let extra = document.getElementById('extra')
+    let linea = document.getElementById('linea').value
+    let orden = document.getElementById('orden').value
+    let lineaInput = document.getElementsByClassName('linea')
+    extra.value = orden+" Línea "+linea
+    lineaInput[1].value = linea
+    datosTitulo()
 }
 
 function datos(firmas=1) {
@@ -50,7 +59,7 @@ function datos(firmas=1) {
             }
 			else
 				llenar += '<td>'+datos[i].value+'</td>'
-			if (datos[i].tagName != 'SELECT')
+			if (datos[i].tagName != 'SELECT' && datos[i].className != 'dato linea')
 				datos[i].value = ''
 		}
 		llenar += '</tr>'
@@ -60,6 +69,7 @@ function datos(firmas=1) {
         }
 	}
 }
+
 
 /*         EXPORTAR TABLA            */
 

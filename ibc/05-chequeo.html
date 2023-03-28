@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1%</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+	<script src="../js/signature_pad.js"></script>
+</head>
+<body>
+	<br><br><br><br>
+	<h1>Monitoreo de Proceso Área de</h1>
+	<h1 id="titulo">1%</h1>
+	<input type="hidden" value="" id="extra">
+
+<!--    FORMULARIO    -->
+
+	<div class="formulario" id="formTabla">
+		<h2 class="titulo">CHEQUEO 1%</h2>
+		<hr>
+		<label>Número de Rollo</label>
+		<input type="number" class="dato">
+
+		<label>Largo</label>
+		<input type="text" class="dato">
+
+		<label>Ancho</label>
+		<input type="text" class="dato">
+
+		<label>Alto</label>
+		<input type="text" class="dato">
+
+		<label>P/P</label>
+		<input type="text" class="dato">
+
+		<label>Tack</label>
+		<input type="text" class="dato">
+
+		<label>Libre</label>
+		<input type="text" class="dato">
+
+		<label>Bolsa</label>
+		<input type="text" class="dato">
+
+		<label>Orden</label>
+		<input type="text" class="dato">
+
+		<h2 class="titulo">Outlet</h2>
+		<hr>
+
+		<label>Outlet - RC</label>
+		<input type="text" class="dato">
+
+		<label>Outlet - C</label>
+		<input type="text" class="dato">
+
+		<label>Outlet - AL</label>
+		<input type="text" class="dato">
+
+		<label>Outlet - LF</label>
+		<input type="text" class="dato">
+
+		<h2 class="titulo">INLET/FALDON</h2>
+		<hr>
+
+		<label>INLET/FALDON - C</label>
+		<input type="text" class="dato">
+
+		<label>INLET/FALDON - AL</label>
+		<input type="text" class="dato">
+
+		<label>INLET/FALDON - LF</label>
+		<input type="text" class="dato">
+
+		<label>Inspector</label>
+		<input type="text" class="dato">
+
+		<label>Fecha</label>
+		<input type="date" class="dato">
+
+		<!-- Botón para enviar datos -->
+		<input type="submit" name="aceptar" value="Enviar Datos" class="btn-datos" onclick="datos()">
+	</div>
+
+<!--    TABLA    -->
+	<input type="submit" name="verTabla" id='btnVer' value="Ver Tabla" class="btn-datos" onclick="verTabla()">
+
+	<table id="tablaDatos">
+		<thead>
+			<tr>
+				<th colspan="9">CHEQUEO 1%</th>
+				<th colspan="4">OUTLET</th>
+				<th colspan="6">INLET/FALDO</th>
+			</tr>
+			<tr>
+				<th>NUM. R</th>
+				<th>LARGO</th>
+				<th>ANCHO</th>
+				<th>ALTO</th>
+				<th>P/P</th>
+				<th>TACK</th>
+				<th>LIBRE</th>
+				<th>BOLSA</th>
+				<th>ORDEN</th>
+
+				<th>RC</th>
+				<th>C</th>
+				<th>AL</th>
+				<th>LF</th>
+
+				<th>C</th>
+				<th>A</th>
+				<th>LF</th>
+				<th>INSP</th>
+				<th>FECHA</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+
+	<input type="submit" name="aceptar" value="Descargar Tabla Impresion Impresión" class="btn-tabla" onclick="exportTableToExcel()">
+
+	<script type="text/javascript" src="../js/tabla.js"></script>
+</body>
+</html>
